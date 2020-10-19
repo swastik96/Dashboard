@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dashboard Sample</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='EWACSStyle1.2.css'>
+    <!-- <script src='main.js'></script> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle1="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        function redirectToHome() {
+          //location.replace("dashBoardV1.2.html")
+          //document.location.href='index.html';
+        }
+        </script>
+</head>
+<body>
+    <!-- <style type="text/css">
+        .container-fluid-fluid.custom-container-fluid {
+          padding: 0 50px;
+        }
+    </style> -->
+    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <nav class="nav-EWACSStyle navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#" style="color: aliceblue;">Xlink Issues acted by EWACS</a>
+                <a class="navbar-brand" href="#">
+                    <img src="./ewacsLogo.jpg" width="800" height="80" alt="" loading="lazy">
+                  </a>
+              </nav> -->
+              <nav class="zone blue sticky" style="padding: 10px;">
+                <ul class="main-nav">
+                    <li style="color: aliceblue;">Dashboard</li>
+                    <li class="push">
+                        <button type="button" style="color: blue;" class="btn btn-warning" onclick="redirectToHome()" data-toggle1="tooltip" data-placement="right" title="GO TO HOME PAGE">
+                            <b><u>Home</u></b> 
+                        </button>
+                        <!-- <img src="./ewacsLogo.jpg" width="150" height="50" alt="" loading="lazy"> -->
+                    </li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+        <br><br><br><br>
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="height: 400px; overflow:auto;">
+        <div class="row" style="padding-top: 1%;">
+          <!-- 9927 -->
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 ">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size: large;">
+                  Error1
+                </div>
+                <!-- <ul class="list-group list-group-flush"> -->
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                    <p class="card-text" style="text-align: center;">
+                      <button type="button" class="btn btn-primary button-EWACSStyle" style="background-color:green;" data-toggle="modal" data-target="#exampleModal9927_1" data-toggle1="tooltip" data-placement="top" title="Total Successful Execution">
+                        <!-- <b data-toggle="tooltip" data-placement="top" title="Tooltip on top"> -->
+                            <img src="./success.png"  width="50" height="30"> - 0
+                        </button>
+                        <!-- </b> -->
+                    </p>
+                        <!-- //modal -->
+                        <div class="modal fade" id="exampleModal9927_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9927_1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel9927_1">9927 Successful Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th data-field="Serial">SL #</th>
+                                                <th data-field="Date" data-sortable="true">Title</th>
+                                                <th data-field="Time" data-sortable="true">Title</th>
+                                                <th data-field="Status">Title</th>
+                                                <th data-field="ErrorDesc">Title</th>
+                                                <th data-field="instance">Title</th>
+                                                <th data-field="Adapter">Title</th>
+                                                <th data-field="FileName">Title</th>
+                                                <th data-field="status">Title</th>
+                                              </thead>
+                                              <tr>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                              </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </li>
+                  
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <p class="card-text" style="text-align: center;">
+                        <button type="button" class="btn btn-primary button-EWACSStyle" style="background-color:red;" data-toggle="modal" data-target="#exampleModal9927_2" data-toggle1="tooltip" data-placement="left" title="Total Execution with Error">
+                            <img src="./error.jpg"  width="50" height="30"> - 0
+                          </button>
+                        </p>
+                          <!-- //modal -->
+                          <!-- <div class="modal fade" id="exampleModal9927_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9927_2" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel9927_2">9927 Error Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <table class="table">
+                                              <thead>
+                                                  <th data-field="Serial">SL #</th>
+                                                  <th data-field="Date" data-sortable="true">Date</th>
+                                                  <th data-field="Time" data-sortable="true">Time</th>
+                                                  <th data-field="Status">Error</th>
+                                                  <th data-field="ErrorDesc">Host</th>
+                                                  <th data-field="instance">Instance</th>
+                                                  <th data-field="Adapter">Adapter</th>
+                                                  <th data-field="FileName">FileName</th>
+                                                  <th data-field="status">Status</th>
+                                                </thead>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                        
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                         <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="bottom" title="Last Successful Execution">
+                            <img src="./sucTime1.jpg"  width="60" height="40"> - 00:00:00</p> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="top" title="Last Execution with Error">
+                        <img src="./errTime1.png"  width="40" height="40">  -  00:00:00</p> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                    <!-- </li> -->
+                    
+                <!-- </ul> -->
+            
+              </div>
+          </div>
+
+          <!-- 4076 -->
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size: large;">
+                  Error2
+                </div>
+                <!-- <ul class="list-group list-group-flush"> -->
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                    <p class="card-text" style="text-align: center;">
+                      <button type="button" class="btn btn-primary button-EWACSStyle" style="background-color:green;" data-toggle="modal" data-target="#exampleModal4076_1" data-toggle1="tooltip" data-placement="left" title="Total Successful Execution">
+                        <img src="./success.png"  width="50" height="30"> - 0
+                        </button>
+                    </p>
+                        <!-- //modal -->
+                        <!-- <div class="modal fade" id="exampleModal4076_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4076_1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel4076_1">4076 Successful Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th data-field="Serial">SL #</th>
+                                                <th data-field="Date" data-sortable="true">Date</th>
+                                                <th data-field="Time" data-sortable="true">Time</th>
+                                                <th data-field="Status">Error</th>
+                                                <th data-field="ErrorDesc">Host</th>
+                                                <th data-field="instance">Instance</th>
+                                                <th data-field="Adapter">Adapter</th>
+                                                <th data-field="FileName">FileName</th>
+                                                <th data-field="status">Status</th>
+                                              </thead>
+                                              <tr>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                              </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </li> -->
+                  
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <p class="card-text" style="text-align: center;">
+                        <button type="button" class="btn btn-primary button-EWACSStyle" style="background-color:red;" data-toggle="modal" data-target="#exampleModal4076_2" data-toggle1="tooltip" data-placement="left" title="Total Execution with Error">
+                            <img src="./error.jpg"  width="50" height="30"> - 0
+                          </button>
+                        </p>
+                          <!-- //modal -->
+                          <!-- <div class="modal fade" id="exampleModal4076_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4076_2" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel4076_2">4076 Error Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <table class="table">
+                                              <thead>
+                                                  <th data-field="Serial">SL #</th>
+                                                  <th data-field="Date" data-sortable="true">Date</th>
+                                                  <th data-field="Time" data-sortable="true">Time</th>
+                                                  <th data-field="Status">Error</th>
+                                                  <th data-field="ErrorDesc">Host</th>
+                                                  <th data-field="instance">Instance</th>
+                                                  <th data-field="Adapter">Adapter</th>
+                                                  <th data-field="FileName">FileName</th>
+                                                  <th data-field="status">Status</th>
+                                                </thead>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                         <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="bottom" title="Last Successful Execution">
+                            <img src="./sucTime1.jpg"  width="60" height="40"> - 00:00:00</p> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="top" title="Last Execution with Error">
+                            <img src="./errTime1.png"  width="40" height="40"> - 00:00:00</p> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                    <!-- </li> -->
+                    
+                <!-- </ul> -->
+              </div>
+          </div>
+        
+          <!-- 9928 -->
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size: large;">
+                  Error3
+                </div>
+                <!-- <ul class="list-group list-group-flush"> -->
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                    <p class="card-text" style="text-align: center;">
+                      <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Successful Execution" style="background-color:green;" data-toggle="modal" data-target="#exampleModal9928_1">
+                        <img src="./success.png"  width="50" height="30"> - 0
+                        </button>
+                    </p>
+                        <!-- //modal -->
+                        <!-- <div class="modal fade" id="exampleModal9928_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel9928_1">9928 Successful Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th data-field="Serial">SL #</th>
+                                                <th data-field="Date" data-sortable="true">Date</th>
+                                                <th data-field="Time" data-sortable="true">Time</th>
+                                                <th data-field="Status">Error</th>
+                                                <th data-field="ErrorDesc">Host</th>
+                                                <th data-field="instance">Instance</th>
+                                                <th data-field="Adapter">Adapter</th>
+                                                <th data-field="FileName">FileName</th>
+                                                <th data-field="status">Status</th>
+                                              </thead>
+                                              <tr>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                              </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </li> -->
+                  
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <p class="card-text" style="text-align: center;">
+                        <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Execution with Error" style="background-color:red;" data-toggle="modal" data-target="#exampleModal9928_2">
+                            <img src="./error.jpg"  width="50" height="30"> - 0
+                          </button>
+                        </p>
+                          <!-- //modal -->
+                          <!-- <div class="modal fade" id="exampleModal9928_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_2" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel9928_2">9928 Error Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <table class="table">
+                                              <thead>
+                                                  <th data-field="Serial">SL #</th>
+                                                  <th data-field="Date" data-sortable="true">Date</th>
+                                                  <th data-field="Time" data-sortable="true">Time</th>
+                                                  <th data-field="Status">Error</th>
+                                                  <th data-field="ErrorDesc">Host</th>
+                                                  <th data-field="instance">Instance</th>
+                                                  <th data-field="Adapter">Adapter</th>
+                                                  <th data-field="FileName">FileName</th>
+                                                  <th data-field="status">Status</th>
+                                                </thead>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                          <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="bottom" title="Last Successful Execution">
+                            <img src="./sucTime1.jpg"  width="60" height="40"> - 00:00:00</p> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="top" title="Last Execution with Error">
+                            <img src="./errTime1.png"  width="40" height="40"> - 00:00:00</p> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                    <!-- </li> -->
+                    
+                <!-- </ul> -->
+              </div>
+          </div>
+
+        </div>
+
+        <div class="row" style="padding-top: 3%;padding-bottom: 1%;">
+          <!-- 0000 -->
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size: large;">
+                  Error4
+                </div>
+                <!-- <ul class="list-group list-group-flush"> -->
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                    <p class="card-text" style="text-align: center;">
+                      <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Successful Execution" style="background-color:green;" data-toggle="modal" data-target="#exampleModal9928_1">
+                        <img src="./success.png"  width="50" height="30"> - 0
+                        </button>
+                    </p>
+                        <!-- //modal -->
+                        <!-- <div class="modal fade" id="exampleModal9928_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel9928_1">9928 Successful Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th data-field="Serial">SL #</th>
+                                                <th data-field="Date" data-sortable="true">Date</th>
+                                                <th data-field="Time" data-sortable="true">Time</th>
+                                                <th data-field="Status">Error</th>
+                                                <th data-field="ErrorDesc">Host</th>
+                                                <th data-field="instance">Instance</th>
+                                                <th data-field="Adapter">Adapter</th>
+                                                <th data-field="FileName">FileName</th>
+                                                <th data-field="status">Status</th>
+                                              </thead>
+                                              <tr>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                              </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </li> -->
+                  
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <p class="card-text" style="text-align: center;">
+                        <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Execution with Error" style="background-color:red;" data-toggle="modal" data-target="#exampleModal9928_2">
+                            <img src="./error.jpg"  width="50" height="30"> - 0
+                          </button>
+                        </p>
+                          <!-- //modal -->
+                          <!-- <div class="modal fade" id="exampleModal9928_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_2" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel9928_2">9928 Error Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <table class="table">
+                                              <thead>
+                                                  <th data-field="Serial">SL #</th>
+                                                  <th data-field="Date" data-sortable="true">Date</th>
+                                                  <th data-field="Time" data-sortable="true">Time</th>
+                                                  <th data-field="Status">Error</th>
+                                                  <th data-field="ErrorDesc">Host</th>
+                                                  <th data-field="instance">Instance</th>
+                                                  <th data-field="Adapter">Adapter</th>
+                                                  <th data-field="FileName">FileName</th>
+                                                  <th data-field="status">Status</th>
+                                                </thead>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                          <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="bottom" title="Last Successful Execution">
+                            <img src="./sucTime1.jpg"  width="60" height="40"> - 00:00:00</p> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="top" title="Last Execution with Error">
+                            <img src="./errTime1.png"  width="40" height="40"> - 00:00:00</p> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                    <!-- </li> -->
+                    
+                <!-- </ul> -->
+              </div>
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size: large;">
+                  Error5
+                </div>
+                <!-- <ul class="list-group list-group-flush"> -->
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                    <p class="card-text" style="text-align: center;">
+                      <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Successful Execution" style="background-color:green;" data-toggle="modal" data-target="#exampleModal9928_1">
+                        <img src="./success.png"  width="50" height="30"> - 0
+                        </button>
+                    </p>
+                        <!-- //modal -->
+                        <!-- <div class="modal fade" id="exampleModal9928_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel9928_1">9928 Successful Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th data-field="Serial">SL #</th>
+                                                <th data-field="Date" data-sortable="true">Date</th>
+                                                <th data-field="Time" data-sortable="true">Time</th>
+                                                <th data-field="Status">Error</th>
+                                                <th data-field="ErrorDesc">Host</th>
+                                                <th data-field="instance">Instance</th>
+                                                <th data-field="Adapter">Adapter</th>
+                                                <th data-field="FileName">FileName</th>
+                                                <th data-field="status">Status</th>
+                                              </thead>
+                                              <tr>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                              </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </li> -->
+                  
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <p class="card-text" style="text-align: center;">
+                        <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Execution with Error" style="background-color:red;" data-toggle="modal" data-target="#exampleModal9928_2">
+                            <img src="./error.jpg"  width="50" height="30"> - 0
+                          </button>
+                        </p>
+                          <!-- //modal -->
+                          <!-- <div class="modal fade" id="exampleModal9928_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_2" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel9928_2">9928 Error Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <table class="table">
+                                              <thead>
+                                                  <th data-field="Serial">SL #</th>
+                                                  <th data-field="Date" data-sortable="true">Date</th>
+                                                  <th data-field="Time" data-sortable="true">Time</th>
+                                                  <th data-field="Status">Error</th>
+                                                  <th data-field="ErrorDesc">Host</th>
+                                                  <th data-field="instance">Instance</th>
+                                                  <th data-field="Adapter">Adapter</th>
+                                                  <th data-field="FileName">FileName</th>
+                                                  <th data-field="status">Status</th>
+                                                </thead>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                          <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="bottom" title="Last Successful Execution">
+                            <img src="./sucTime1.jpg"  width="60" height="40"> - 00:00:00</p> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="top" title="Last Execution with Error">
+                            <img src="./errTime1.png"  width="40" height="40"> - 00:00:00</p> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                    <!-- </li> -->
+                    
+                <!-- </ul> -->
+              </div>
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="card">
+                <div class="card-header" style="text-align: center; font-size: large;">
+                  Error6
+                </div>
+                <!-- <ul class="list-group list-group-flush"> -->
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                    <p class="card-text" style="text-align: center;">
+                      <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Successful Execution" style="background-color:green;" data-toggle="modal" data-target="#exampleModal9928_1">
+                        <img src="./success.png"  width="50" height="30"> - 0
+                        </button>
+                    </p>
+                        <!-- //modal -->
+                        <!-- <div class="modal fade" id="exampleModal9928_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_1" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel9928_1">9928 Successful Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <thead>
+                                                <th data-field="Serial">SL #</th>
+                                                <th data-field="Date" data-sortable="true">Date</th>
+                                                <th data-field="Time" data-sortable="true">Time</th>
+                                                <th data-field="Status">Error</th>
+                                                <th data-field="ErrorDesc">Host</th>
+                                                <th data-field="instance">Instance</th>
+                                                <th data-field="Adapter">Adapter</th>
+                                                <th data-field="FileName">FileName</th>
+                                                <th data-field="status">Status</th>
+                                              </thead>
+                                              <tr>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                                  <td>Value</td>
+                                              </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </li> -->
+                  
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <p class="card-text" style="text-align: center;">
+                        <button type="button" class="btn btn-primary button-EWACSStyle" data-toggle1="tooltip" data-placement="left" title="Total Execution with Error" style="background-color:red;" data-toggle="modal" data-target="#exampleModal9928_2">
+                            <img src="./error.jpg"  width="50" height="30"> - 0
+                          </button>
+                        </p>
+                          <!-- //modal -->
+                          <!-- <div class="modal fade" id="exampleModal9928_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9928_2" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel9928_2">9928 Error Details</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <table class="table">
+                                              <thead>
+                                                  <th data-field="Serial">SL #</th>
+                                                  <th data-field="Date" data-sortable="true">Date</th>
+                                                  <th data-field="Time" data-sortable="true">Time</th>
+                                                  <th data-field="Status">Error</th>
+                                                  <th data-field="ErrorDesc">Host</th>
+                                                  <th data-field="instance">Instance</th>
+                                                  <th data-field="Adapter">Adapter</th>
+                                                  <th data-field="FileName">FileName</th>
+                                                  <th data-field="status">Status</th>
+                                                </thead>
+                                                <tr>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                    <td>Value</td>
+                                                </tr>
+                                          </table>
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                          <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="bottom" title="Last Successful Execution">
+                            <img src="./sucTime1.jpg"  width="60" height="40"> - 00:00:00</p> -->
+                    <!-- </li> -->
+
+                    <!-- <li class="list-group-item" style="text-align: center;"> -->
+                        <!-- <p class="card-text" style="text-align: center;" data-toggle1="tooltip" data-placement="top" title="Last Execution with Error">
+                            <img src="./errTime1.png"  width="40" height="40"> - 00:00:00</p> -->
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          Total Successful Execution - 0
+                          </button> -->
+                    <!-- </li> -->
+                    
+                <!-- </ul> -->
+              </div>
+          </div>
+
+        </div>
+        
+          <!-- <div class="col-sm">
+            One of three columns
+          </div> -->
+        </div>
+    </div>
+    
+      </div>
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+            <!-- <nav class="nav-EWACSStyle navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#" style="color: aliceblue;">Copyright © 2020 BSI Offshore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+            <a class="navbar-brand" href="#">
+                    <img src="./TechmLogo.png" width="80" height="30" alt="" loading="lazy">
+                  </a>
+                  <a class="navbar-brand" href="#">
+                    <img src="./nestleLogo.jpg" width="150" height="40" alt="" loading="lazy">
+                  </a>
+              </nav> -->
+              <nav class="nav-EWACSStyle navbar navbar-light bg-light sticky">
+                <a class="navbar-brand" href="#" style="color: aliceblue;">Copyright © 2020 Swastik Ranjan Nanda
+                </a>
+                  <a class="push" href="#">
+                    <!-- <img src="./ewacsLogo.jpg" width="150" height="50" alt="" loading="lazy">&nbsp;&nbsp;&nbsp;
+                    <img src="./TechmLogo.png" width="80" height="30" alt="" loading="lazy">&nbsp;&nbsp;&nbsp;
+                    <img src="./nestleLogo.jpg" width="150" height="40" alt="" loading="lazy"> -->
+                  </a>
+              </nav>
+        </div>
+    </div>
+</body>
