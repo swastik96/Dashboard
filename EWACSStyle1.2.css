@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
     font-family: Arial;
     /* background: linear-gradient(90deg,#FF5EDF 0%,#04C8DE 80%); */
-    background-image:url("android.jpg");
+    background-image:url("./android.jpg");
     background-size: auto;
 }
 
